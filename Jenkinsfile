@@ -16,6 +16,20 @@ pipeline {
                 echo '<------------- Build completed --------------->'
             }
         }
-
+        stage('Sonar Analysis') {
+            environment {
+                scannerHome = tool 'SonarQubeScanner'
+            }
+    
+            steps {
+                echo '<----------------------------Sonar Analysis Started ------------------------------->
+        
+                echo '<----------------------------Sonar Analysis Ends ---------------------------------->
+            }
+        }
+        
     }
- }
+}
+    
+
+
